@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MindMitra - Mental Health Chatbot</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      align-items: center;
+    }
+    #chatbox {
+      width: 360px;
+      max-width: 90vw;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      height: 600px;
+      overflow: hidden;
+    }
+    #chat {
+      flex: 1;
+      padding: 16px;
+      overflow-y: auto;
+    }
+    .message {
+      margin-bottom: 16px;
+      max-width: 80%;
+      padding: 10px 14px;
+      border-radius: 20px;
+      line-height: 1.4;
+    }
+    .user {
+      margin-left: auto;
+      background: #DCF8C6;
+    }
+    .bot {
+      background: #eee;
+    }
+    #inputArea {
+      display: flex;
+      border-top: 1px solid #ddd;
+      padding: 10px;
+      background: #fafafa;
+    }
+    #userInput {
+      flex: 1;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+    #sendBtn {
+      background: #4caf50;
+      border: none;
+      padding: 0 20px;
+      margin-left: 10px;
+      border-radius: 20px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #sendBtn:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div id="chatbox" role="main" aria-label="Mental Health Chatbot">
+    <div id="chat"></div>
+    <div id="inputArea">
+      <input type="text" id="userInput" placeholder="Type your message here..." aria-label="Type your message here"/>
+      <button id="sendBtn" aria-label="Send message">Send</button>
+    </div>
+  </div>
+
+  <script src="chatbot.js"></script>
+</body>
+</html>
